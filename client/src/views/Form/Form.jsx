@@ -95,31 +95,33 @@ export default function Form(){
     //RETURN  _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
 
     return(
-        <div className={style.contenedor}> 
+        <div className={style.contenedorMain}> 
+            <div className={style.contenedor}> 
             <div>
                 <Link to= '/home'><button>Back</button></Link>
-                <h1>Create your recipe</h1>
+                <h1 className={style.Createh1}>Create your recipe</h1>
             </div> 
 
             <form onSubmit={(e) =>{handleSubmit(e)}}>
 
                 <div>
-                    <label>Title </label>
+                    <label className={style.label}>Title </label>
                     <input type="text" value={input.title} onChange={handlerChange} name="title"/>
                 </div>
                 <div>
-                    <label>Resume </label>
+                    <label className={style.label}>Resume </label>
                     <input type="text" value={input.summary} onChange={handlerChange} name="summary"/>
                 </div>
                 <div>
-                    <label>HealthScore </label>
+                    <label className={style.label}>HealthScore </label>
                     <input type="text" value={input.healthScore} onChange={handlerChange} name="healthScore"/>
                 </div>
                 <div>
-                    <label>Steps </label>
+                    <label className={style.label}>Steps </label>
                     <input type="text" value={input.analyzedInstructions} onChange={handlerChange} name="analyzedInstructions"/>
                 </div>
                 <div>
+                    <label className={style.label}>Select types diets </label>
                     <select onChange={(e)=> handlerSelect(e)}>
                         <option> </option>
                         {typeDiets?.map((ele) => {
@@ -127,8 +129,9 @@ export default function Form(){
                         })}
                     </select>
                 </div>
-                <button type="submit">SUBMIT</button>
+                <button className={style.button} type="submit">SUBMIT</button>
             </form>
+        </div>
         </div>
     )
 }

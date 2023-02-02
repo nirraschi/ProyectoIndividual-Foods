@@ -91,12 +91,15 @@ const Home = () =>{
             {/* <img className={style.img2} src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg" alt="Imagen decorativa home" /> */}
             </div>
             
-            <div>       
-                        <SearchBar/>
+            <div>      
+                      
+                    <SearchBar/>
+                     
+
                         <div className={style.containerOrder}>
                             <div className={style.containerSelect}>
                                 <p>Alphabetical Order</p>
-                                <select onChange={e => handleSort(e)}>
+                                <select className={style.select} onChange={e => handleSort(e)}>
                                     <option value="All">No order</option>
                                     <option value="asc">Ascendente</option>
                                     <option value="desc">Descendente</option>
@@ -104,31 +107,38 @@ const Home = () =>{
                             </div>
                             <div className={style.containerSelect}>
                                 <p>Order by Health Score </p>
-                                <select onChange={e => handleSortHS(e)}>
+                                <select className={style.select} onChange={e => handleSortHS(e)}>
                                     <option value="All">No order</option>
                                     <option value="asc">Lowest to highest</option>
                                     <option value="desc">Highest to lowest</option>
                                 </select> 
                             </div> 
+                            <div className={style.containerSelect}>
+                            <p>Type Diets</p>
+                            <select className={style.select} onChange={e => handleFilterStatus(e)}>
+                                <option value="All">All</option>
+                                <option value="gluten free">Gluten free</option>
+                                <option value="ketogenic">Ketogenic</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="lacto-vegetarian">Lacto-vegetarian</option>
+                                <option value="lacto ovo vegetarian">Lacto ovo vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                                <option value="pescatarian">Pescatarian</option>
+                                <option value="paleolithic">Paleolithic</option>
+                                <option value="primal">Primal</option>
+                                <option value="whole 30'">Whole 30'</option>
+                            </select>
+                            </div>
+
+                
                         </div>
-                <p>Type Diets</p>
-                <select onChange={e => handleFilterStatus(e)}>
-                    <option value="All">All</option>
-                    <option value="gluten free">Gluten free</option>
-                    <option value="ketogenic">Ketogenic</option>
-                    <option value="vegetarian">Vegetarian</option>
-                    <option value="lacto-vegetarian">Lacto-vegetarian</option>
-                    <option value="lacto ovo vegetarian">Lacto ovo vegetarian</option>
-                    <option value="vegan">Vegan</option>
-                    <option value="pescatarian">Pescatarian</option>
-                    <option value="paleolithic">Paleolithic</option>
-                    <option value="primal">Primal</option>
-                    <option value="whole 30'">Whole 30'</option>
-                </select>    
-     
+                        <button className={style.buttonFilter} onClick={e => {handleClick(e)}}>Reset Filters</button>
+                        
+                
             </div>
-            <button onClick={e => {handleClick(e)}}>Reset Filters</button>
+            
         </div>
+
 
         <div>
         <Paginado

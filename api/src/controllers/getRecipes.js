@@ -5,7 +5,7 @@ const {Recipe, TypeDiet} = require('../db')
 const {Sequelize} = require('sequelize');
 
 //const  API_KEY = require('../API_KEY');
-const  API_KEY = 'a1a1400d25c84cbaa6789b26ebd544d8';
+const  API_KEY = 'ee7c8a813a7e4955a4f57f85fb1d849e';
 
 const getApiInfo = async () => {
     //const apiUrl = await axios.get("https://run.mocky.io/v3/84b3f19c-7642-4552-b69c-c53742badee5")

@@ -31,11 +31,14 @@ export default function Detail(props){
                     <p className={style.summaryDetail} >
                         {myRecipe[0].summary.replace(/<[^>]*>/g, "")}
                     </p>
-                    <h4 className={style.dishTypes}>Dish Type: {myRecipe[0].dishTypes ? myRecipe[0].dishTypes.map(d => d.name) :'dish type not found'  }</h4>
-                    <h5 className={style.healthScore}>healthScore: {myRecipe[0].healthScore}</h5>
-                    <h5 className={style.type}>steps:{ Array.isArray(myRecipe[0].analyzedInstructions) ? myRecipe[0].analyzedInstructions.map(e => e.steps.map(f => f.step)) : myRecipe[0].analyzedInstructions }</h5>  
+                    {/* <h4 className={style.dishTypes}>Dish Type: {myRecipe[0].dishTypes ? myRecipe[0].dishTypes.map(d => d.name) :'dish type not found'  }</h4> */}
+                    <h5 className={style.healthScore}>HealthScore {myRecipe[0].healthScore}</h5>
+                    <h4 className={style.stepsTitle}>Steps</h4>  
+                    <h5 className={style.type}>{ Array.isArray(myRecipe[0].analyzedInstructions) ? myRecipe[0].analyzedInstructions.map(e => e.steps.map(f => f.step)) : myRecipe[0].analyzedInstructions }</h5>  
+
 
                 </div>
+
             </div> : <p>Loading...</p>
         }
         <Link to='/home'>
