@@ -1,0 +1,31 @@
+.navPaginado{
+    margin:10px 0;
+}
+.paginado{
+    list-style: none;
+	text-align: center;
+}
+
+.number{
+	display:inline-block;
+	margin-right:5px;
+}
+
+.a{
+    display:block;
+    width: 30px;
+    height: 25px;
+	color:#fff;
+	background:#5a9b51;
+	text-decoration: none;
+    text-align: center;
+
+}
+.a:hover{
+    background:#426d3c;
+}
+.a.active{
+    background:#037E8C;
+	font-weight:bold;
+}
+

@@ -1,0 +1,24 @@
+.mainContainer{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #5a9b51;
+
+    padding: 0px;
+}
+.text{
+    font-style: normal;
+    font-family: Helvetica;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+    margin: 0px 20px 0px 20px;
+}   
+
+.text:hover{
+    color: #f37c27;
+    text-decoration: underline;
+
+}

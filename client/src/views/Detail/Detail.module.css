@@ -1,0 +1,15 @@
+.contenedor{
+    background-color: blue;
+    margin: 180px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+.contenedorInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+.image{
+    width: 500px;
+}
